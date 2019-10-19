@@ -4,5 +4,10 @@
 
 .day {
     background-color: white;
+    max-width: 50px;
+    max-height: 50px;
+    border: 1px solid black;
+    display: flex;
+    color: green;
 
 }
