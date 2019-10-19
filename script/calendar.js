@@ -1,4 +1,4 @@
-// READER from .txt file
+// READER from .txt file to array (calendarArrData)
 $(document).ready(function () {
     $.ajax({
         type: "GET",
@@ -11,7 +11,7 @@ $(document).ready(function () {
 function processData(allText) {
     var allTextLines = allText.split(/\r\n|\n/);
     var headers = allTextLines[0].split(',');
-    var lines = [];
+    var calendarArrData = [];
 
     for (var i = 1; i < allTextLines.length; i++) {
         var data = allTextLines[i].split(',');
@@ -21,40 +21,38 @@ function processData(allText) {
             for (var j = 0; j < headers.length; j++) {
                 tarr.push(data[j]);
             }
-            lines.push(tarr);
+            calendarArrData.push(tarr);
         }
     }
-    // alert(lines);
-    //console.log(lines);
-    //alert(lines[0][2]);
 
-    // Insert the data from .txt (array lines) to code of the html page 
-    var day = '<div class="day"><div class="date">'
-        + lines[0][0]
-        + '</div><div class="course">'
-        + lines[0][1]
-        + '</div><div class="instructor">'
-        + lines[0][2]
-        + '</div></div>';
-
-    for (i = 1; i < lines.length; i++) {
-        if (lines[i][0].includes("Week") ||
-            (lines[i][0].includes("Break"))) {
+    // Insert the data from array (array calendarArrData) to code of the html page 
+    // 
+    var htmlCode = "";
+    var dayArr = ['Mon','Tues', 'Wed', 'Thur', 'Fri'];
+    var dayIndex = 0;
+    for (let i = 0; i < calendarArrData.length; i++) {
+        // If - filter to exclude empty cells
+        if (calendarArrData[i][0].includes("Week") ||
+            (calendarArrData[i][0].includes("Break"))) {
 
         } else {
-            day = day
-                + '<div class="day"><div class="date">'
-                + lines[i][0]
+            htmlCode = htmlCode
+                + '<div class="day"><div class="dayOfWeek">'
+                + dayArr[dayIndex]
+                + '</div><div class="date">'
+                + calendarArrData[i][0]
                 + '</div><div class="course">'
-                + lines[i][1]
+                + calendarArrData[i][1]
                 + '</div><div class="instructor">'
-                + lines[i][2]
+                + calendarArrData[i][2]
                 + '</div></div>';
+            dayIndex ++;
         }
+     if (dayIndex > 4) dayIndex = 0;
 
     }
-    document.getElementById('day').innerHTML = day;
+    document.getElementById('day').innerHTML = htmlCode;
     var d = new Date();
-    //alert(d);
+    alert(d.get());
 
 }
