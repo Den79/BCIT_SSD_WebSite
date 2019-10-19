@@ -27,7 +27,7 @@ function processData(allText) {
 
     // Insert the data from array (array calendarArrData) to code of the html page 
     // 
-    var htmlCode = "";
+    var htmlCode = '<div class="week">'; // opening the first week-div
     var dayArr = ['Mon','Tues', 'Wed', 'Thur', 'Fri'];
     var dayIndex = 0;
     for (let i = 0; i < calendarArrData.length; i++) {
@@ -48,11 +48,16 @@ function processData(allText) {
                 + '</div></div>';
             dayIndex ++;
         }
-     if (dayIndex > 4) dayIndex = 0;
-
+    // end of the week detector
+     if (dayIndex > 4) {
+         dayIndex = 0;
+         htmlCode = htmlCode + '</div><div class="week">';
+       }  
     }
+    htmlCode = htmlCode + '</div>' // close the last week - div
+
     document.getElementById('day').innerHTML = htmlCode;
-    var d = new Date();
-    alert(d.get());
+    //var d = new Date();
+    //alert(d);
 
 }

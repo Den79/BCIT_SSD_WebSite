@@ -5,34 +5,42 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	.day {
-		background-color: white;
-		width: 150px;
-		height: 150px;
-		margin: 2px;
-		border: 1px dotted rgb(45, 45, 133);
-		color: black;
-		font-size: 14px;
-		text-align: center;
+	.week {
+		display: flex;
+		width: 100%;
+		
+		.day {
+			background-color: white;
+			width: 150px;
+			height: 150px;
+			margin: 2px;
+			border: 1px dotted rgb(45, 45, 133);
+			font-size: 14px;
+			text-align: center;
+			// display: flex;
 
-		.dayOfWeek {
-			font-size: 1.2em;
-		}
-		.date {
-			color:white;
-			background-color: rgb(73, 73, 121);
-			padding: 3px;
-			font-weight: bold;
-			font-size: 1.2em;
-		}
-		.course {
-			padding: 3px;
-			color:rgb(20, 40, 95);
-		}
-		.instructor {
-			padding: 3px;
-			color:rgb(27, 101, 145);
-		}
-	}
-}
+			.dayOfWeek {
+				font-size: 1.2em;
+			}
+			
+			.date {
+				color:white;
+				background-color: rgb(73, 73, 121);
+				padding: 3px;
+				font-weight: bold;
+				font-size: 1.2em;
+			}
+			
+			.course {
+				padding: 3px;
+				color:rgb(20, 40, 95);
+			}
+			
+			.instructor {
+				padding: 3px;
+				color:rgb(27, 101, 145);
+			}
+		} // end of .day
+	} // end of .week
+} // end of .calendar
 /* calendar END*/
