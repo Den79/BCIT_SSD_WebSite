@@ -45,12 +45,27 @@
                 //alert(lines[0][2]);
 
                 // Insert the data from .txt (array lines) to code of the html page 
-                var day = '<div class="day"><p>' + lines[0][0] + '<br>' + lines[0][1] + '<br>' + lines[0][2] + '</p></div>';
+                var day = '<div class="day"><div class="date">'
+                        + lines[0][0] 
+                        + '</div><div class="course">' 
+                        + lines[0][1] 
+                        + '</div><div class="instructor">'
+                        + lines[0][2] 
+                        + '</div></div>';   
+
                 for(i=1; i< lines.length; i++){
-                    if ( lines[i][0].includes("Week") ) {    
+                    if ( lines[i][0].includes("Week") ||
+                        ( lines[i][0].includes("Break") ))  {    
 
                     } else {
-                        day = day + '<div class="day"><p>' + lines[i][0] + '<br>' + lines[i][1] + '<br>' + lines[i][2] + '</p></div>';
+                        day = day 
+                                + '<div class="day"><div class="date">' 
+                                + lines[i][0] 
+                                + '</div><div class="course">' 
+                                + lines[i][1] 
+                                + '</div><div class="instructor">' 
+                                + lines[i][2] 
+                                + '</div></div>';
                     }
                     
                 }
