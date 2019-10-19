@@ -1,13 +1,17 @@
 .calendar {
     background-color: white;
+    color: black;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .day {
     background-color: white;
-    max-width: 50px;
-    max-height: 50px;
-    border: 1px solid black;
-    display: flex;
-    color: green;
-
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid blue;
+	color: black;
+	font-size: 14px;
+	text-align: center;
 }

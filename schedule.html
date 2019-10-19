@@ -5,15 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Schedule</title>
 </head>
 <body>
     <h1>Calendar</h1>
-    <div class="calendar">
-        <p>calendar</p>
-        <div class="day">
-            <p>day1</p>
-        </div>
+    <div id="day" class="calendar">
+
+        <script>
+            
+            // READER from .txt file
+            $(document).ready(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "data/schedule-data.txt",
+                    dataType: "text",
+                    success: function(data) {processData(data);}
+                });
+            });
+
+            function processData(allText) {
+                var allTextLines = allText.split(/\r\n|\n/);
+                var headers = allTextLines[0].split(',');
+                var lines = [];
+
+                for (var i=1; i<allTextLines.length; i++) {
+                    var data = allTextLines[i].split(',');
+                    if (data.length == headers.length) {
+
+                        var tarr = [];
+                        for (var j=0; j<headers.length; j++) {
+                            tarr.push(data[j]);
+                        }
+                        lines.push(tarr);
+                    }
+                }
+                // alert(lines);
+                //console.log(lines);
+                //alert(lines[0][2]);
+
+                // Insert the data from .txt (array lines) to code of the html page 
+                var day = '<div class="day"><p>' + lines[0][0] + '<br>' + lines[0][1] + '<br>' + lines[0][2] + '</p></div>';
+                for(i=1; i< lines.length; i++){
+                    if ( lines[i][0].includes("Week") ) {    
+
+                    } else {
+                        day = day + '<div class="day"><p>' + lines[i][0] + '<br>' + lines[i][1] + '<br>' + lines[i][2] + '</p></div>';
+                    }
+                    
+                }
+                document.getElementById('day').innerHTML = day;
+                var d = new Date();
+                //alert(d);
+
+
+
+
+
+
+            }
+
+           
+        </script>
+
     </div>
 </body>
 </html>
