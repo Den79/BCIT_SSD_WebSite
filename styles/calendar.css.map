@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,SAAU;EACN,gBAAgB,EAAE,KAAK",
-"sources": ["../scss/calendar.scss"],
-"names": [],
-"file": "calendar.css"
-}
