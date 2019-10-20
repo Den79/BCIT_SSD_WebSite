@@ -36,8 +36,10 @@
 
 		.day {
 			background-color: white;
-			width: 150px;
-			height: 150px;
+			// width: 150px;
+			// height: 150px;
+
+			flex:1;
 			margin: 2px;
 			border: 1px dotted rgb(45, 45, 133);
 			font-size: 14px;
@@ -69,4 +71,45 @@
 		} // end of .day
 	} // end of .week
 } // end of .calendar
+
+.changeCalendarView {
+	.calendar {
+
+		.week {
+			display: block;
+		}
+
+		.day {
+			display: flex;
+			width: 100%;
+			height: auto;
+			//justify-content: space-between;
+
+			.dayOfWeek {
+				flex:2;
+				text-align: left;
+				padding-left: 10px;
+			}
+			
+			.date {
+				flex:1;
+			}
+			
+			.course {
+				flex:3;
+				text-align: left;
+				padding-left: 10px;
+			}
+			
+			.instructor {
+				flex:2;
+			}
+
+		}
+
+		#empty{
+			display: none;
+		}
+	}
+}
 /* calendar END*/

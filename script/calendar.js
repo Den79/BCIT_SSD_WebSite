@@ -30,7 +30,7 @@ function processData(allText) {
     var monthArrFullName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     var monthArrShortName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var monthIndex = 8; // first month of the calendar - Sep
-    var dayArr = ['Mon', 'Tues', 'Wed', 'Thur', 'Fri'];
+    var dayArr = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
     var dayIndex = 0;
     var htmlWeek = "";
     var htmlMonth = "";
@@ -95,7 +95,9 @@ function processData(allText) {
     // add the last "week" and "month" - div
     finalHtmlCode = finalHtmlCode
                         + '<div class="month">'
-                        + monthArrShortName[monthIndex]
+                        + '<p>' 
+                        + monthArrFullName[monthIndex] // use full name of month instead of short version
+                        + '</p>'
                         + htmlMonth
                         + '<div class="week">'
                         + htmlWeek
@@ -114,3 +116,4 @@ function emptyDays(numb, howManyDaysInWeek) {
     }
     return empty;
 };
+
