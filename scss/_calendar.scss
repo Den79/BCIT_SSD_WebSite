@@ -1,21 +1,39 @@
 /* calendar START*/
+.wrapper {
+	background-color: rgb(90, 90, 129);
+
+}
 .calendar {
     background-color: white;
     color: black;
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 800px;
+	
+	margin: 0 auto;
 
 	.month {
 		display: block;
 		width: 100%;
 		text-align: center;
 		font-size: 2em;
+		p {
+			margin: 0;
+			background-color: rgb(65, 65, 117);
+			border: 1px dotted white;
+			color: white;
+		}
 	}
 
 	.week {
 		display: flex;
 		width: 100%;
-		
+		justify-content: center;
+
+		#empty {
+			background-color: rgba(238, 236, 236, 0.521);
+		}
+
 		.day {
 			background-color: white;
 			width: 150px;
@@ -24,7 +42,7 @@
 			border: 1px dotted rgb(45, 45, 133);
 			font-size: 14px;
 			text-align: center;
-			// display: flex;
+			// display: flex;			
 
 			.dayOfWeek {
 				font-size: 1.2em;
@@ -33,6 +51,7 @@
 			.date {
 				color:white;
 				background-color: rgb(73, 73, 121);
+				border: 1px dotted white;
 				padding: 3px;
 				font-weight: bold;
 				font-size: 1.2em;

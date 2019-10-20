@@ -25,10 +25,9 @@ function processData(allText) {
         }
     }
 
-
     // Insert the data from array (array calendarArrData) to code of the html page 
-    // 
 
+    var monthArrFullName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     var monthArrShortName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var monthIndex = 8; // first month of the calendar - Sep
     var dayArr = ['Mon', 'Tues', 'Wed', 'Thur', 'Fri'];
@@ -36,6 +35,7 @@ function processData(allText) {
     var htmlWeek = "";
     var htmlMonth = "";
     var finalHtmlCode = "";
+    var previousDayIndex = 0;
 
     for (let i = 0; i < calendarArrData.length; i++) {
 
@@ -49,28 +49,36 @@ function processData(allText) {
              // end of the week detector
              if (dayIndex > 4) {
                 dayIndex = 0;
-                htmlMonth = htmlMonth + '<div class="week">' + htmlWeek + '</div>';
+                htmlMonth = htmlMonth 
+                        + '<div class="week">' 
+                        + htmlWeek 
+                        + '</div>';
                 htmlWeek = "";
+                //previousDayIndex = 0;
             }
 
             //end of the month detector
             if (!(calendarArrData[i][0].includes(monthArrShortName[monthIndex]))) {
                 finalHtmlCode = finalHtmlCode
-                      + '<div class="month">'
-                    + monthArrShortName[monthIndex]
+                    + '<div class="month">'
+                    + '<p>' 
+                    + monthArrFullName[monthIndex] // use full name of month instead of short version
+                    + '</p>'
                     + htmlMonth
                     + '<div class="week">'
                     + htmlWeek
+                    + emptyDays(dayArr.length - dayIndex, dayArr.length) // add empty day-divs to fill  month-div in the end of month
                     + '</div></div>';
+                previousDayIndex = dayIndex; // save data for next month (how many empty days add in the beginning)
                 htmlWeek = "";
                 htmlMonth = "";
                 monthIndex++;
                 if (monthIndex > 11) monthIndex = 0;
             }
 
-
             // days
             htmlWeek = htmlWeek
+                + emptyDays(previousDayIndex, dayArr.length) // add empty day-divs to fill  month-div in the beginning of month (first week)
                 + '<div class="day"><div class="dayOfWeek">'
                 + dayArr[dayIndex]
                 + '</div><div class="date">'
@@ -81,9 +89,8 @@ function processData(allText) {
                 + calendarArrData[i][2]
                 + '</div></div>';
             dayIndex++;
-  
+            previousDayIndex = 0; // how many empty days should we add
         }
-
     }
     // add the last "week" and "month" - div
     finalHtmlCode = finalHtmlCode
@@ -95,7 +102,15 @@ function processData(allText) {
                         + '</div></div>';
 
     document.getElementById('calendarBody').innerHTML = finalHtmlCode;
-    //var d = new Date();
-    //alert(d);
-
 }
+
+// function get: numb: number of days (how many empty days we need) and howManyDaysInWeek: how many days in our calendar's week.  
+// return: empty .day-divs to fill the calendar
+function emptyDays(numb, howManyDaysInWeek) {
+    if (numb == howManyDaysInWeek) return "";  // check if the week is full of empty day-divs
+    var empty = "";
+    for (let i=0; i < numb; i++) {
+        empty = empty + '<div id="empty" class="day"></div>'
+    }
+    return empty;
+};
