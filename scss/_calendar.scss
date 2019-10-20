@@ -16,12 +16,13 @@
 		display: block;
 		width: 100%;
 		text-align: center;
-		font-size: 2em;
+		font-size: 1rem; // all text in calendar
 		p {
 			margin: 0;
 			background-color: rgb(65, 65, 117);
 			border: 1px dotted white;
 			color: white;
+			font-size: 3rem; // only month name
 		}
 	}
 
@@ -38,16 +39,14 @@
 			background-color: white;
 			// width: 150px;
 			// height: 150px;
-
-			flex:1;
-			margin: 2px;
+			flex: 1;   // FIX or NOT
+			margin: 3px;
 			border: 1px dotted rgb(45, 45, 133);
-			font-size: 14px;
 			text-align: center;
 			// display: flex;			
 
 			.dayOfWeek {
-				font-size: 1.2em;
+				//font-size: 1rem;
 			}
 			
 			.date {
@@ -56,7 +55,6 @@
 				border: 1px dotted white;
 				padding: 3px;
 				font-weight: bold;
-				font-size: 1.2em;
 			}
 			
 			.course {
@@ -83,6 +81,7 @@
 			display: flex;
 			width: 100%;
 			height: auto;
+			margin: 2px 0;
 			//justify-content: space-between;
 
 			.dayOfWeek {
@@ -111,5 +110,48 @@
 			display: none;
 		}
 	}
+}
+
+@media (max-width: 575px) {
+	#listView {
+		display: none;
+	}
+	.calendar {
+
+		.week {
+			font-size: 1.5rem;
+			display: block;
+		}
+
+		#empty{
+			display: none;
+		}
+	}
+	
+	.changeCalendarView {
+		.calendar {
+	
+			.week {
+				font-size: 1.5rem;
+				display: block;
+			}
+	
+			.day {
+				display: block;
+
+				.dayOfWeek {
+					text-align: center;
+					padding-left: 0;
+				}
+				
+				.course {
+					text-align: center;
+					padding-left: 0;
+				}
+				
+			}
+		}
+	}
+
 }
 /* calendar END*/
