@@ -1,34 +1,61 @@
 /* calendar START*/
+.wrapper {
+	background-color: rgb(90, 90, 129);
+
+}
 .calendar {
     background-color: white;
     color: black;
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 800px;
+	
+	margin: 0 auto;
+
+	.month {
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 1rem; // all text in calendar
+		p {
+			margin: 0;
+			background-color: rgb(65, 65, 117);
+			border: 1px dotted white;
+			color: white;
+			font-size: 3rem; // only month name
+		}
+	}
 
 	.week {
 		display: flex;
 		width: 100%;
-		
+		justify-content: center;
+
+		#currentDay {
+			background-color: rgba(255, 61, 110, 0.24);
+			border: 2px solid red;
+		}
+
+		#empty {
+			background-color: rgba(238, 236, 236, 0.521);
+		}
+
 		.day {
 			background-color: white;
-			width: 150px;
-			height: 150px;
-			margin: 2px;
+			// width: 150px;
+			// height: 150px;
+			flex: 1;   // FIX or NOT
+			margin: 3px;
 			border: 1px dotted rgb(45, 45, 133);
-			font-size: 14px;
 			text-align: center;
-			// display: flex;
-
-			.dayOfWeek {
-				font-size: 1.2em;
-			}
+			// display: flex;			
 			
 			.date {
 				color:white;
 				background-color: rgb(73, 73, 121);
+				border: 1px dotted white;
 				padding: 3px;
 				font-weight: bold;
-				font-size: 1.2em;
 			}
 			
 			.course {
@@ -39,8 +66,104 @@
 			.instructor {
 				padding: 3px;
 				color:rgb(27, 101, 145);
+
+				a {
+					text-decoration: none;
+				}
+
+				a:hover{
+					background-color: rgba(2, 2, 187, 0.164);
+					padding: 4px 10px 4px;
+					border-radius: 4px;
+				}
+				
 			}
 		} // end of .day
 	} // end of .week
 } // end of .calendar
+
+.changeCalendarView {
+	.calendar {
+
+		.week {
+			display: block;
+		}
+
+		.day {
+			display: flex;
+			width: 100%;
+			height: auto;
+			margin: 2px 0;
+			//justify-content: space-between;
+
+			.dayOfWeek {
+				flex:2;
+				text-align: left;
+				padding-left: 10px;
+			}
+			
+			.date {
+				flex:1;
+			}
+			
+			.course {
+				flex:3;
+				text-align: left;
+				padding-left: 10px;
+			}
+			
+			.instructor {
+				flex:2;
+			}
+
+		}
+
+		#empty{
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	#listView {
+		display: none;
+	}
+	.calendar {
+
+		.week {
+			font-size: 1.5rem;
+			display: block;
+		}
+
+		#empty{
+			display: none;
+		}
+	}
+	
+	.changeCalendarView {
+		.calendar {
+	
+			.week {
+				font-size: 1.5rem;
+				display: block;
+			}
+	
+			.day {
+				display: block;
+
+				.dayOfWeek {
+					text-align: center;
+					padding-left: 0;
+				}
+				
+				.course {
+					text-align: center;
+					padding-left: 0;
+				}
+				
+			}
+		}
+	}
+
+}
 /* calendar END*/

@@ -186,5 +186,22 @@ Apr 9,Mock Interviews,Phil/Marlene
 Apr 10,Good Friday,
 Industry Projects,,
 Apr 13,Easter Monday,
-Apr 14-May 7,Industry Projects,Phil
+Apr 14,Industry Projects,Phil
+Apr 15,Industry Projects,Phil
+Apr 16,Industry Projects,Phil
+Apr 17,Industry Projects,Phil
+Apr 20,Industry Projects,Phil
+Apr 21,Industry Projects,Phil
+Apr 22,Industry Projects,Phil
+Apr 23,Industry Projects,Phil
+Apr 24,Industry Projects,Phil
+Apr 27,Industry Projects,Phil
+Apr 28,Industry Projects,Phil
+Apr 29,Industry Projects,Phil
+Apr 30,Industry Projects,Phil
+May 1,Industry Projects,Phil
+May 4,Industry Projects,Phil
+May 5,Industry Projects,Phil
+May 6,Industry Projects,Phil
+May 7,Industry Projects,Phil
 May 8,Demo Day,Phil
