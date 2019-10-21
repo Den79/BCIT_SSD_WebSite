@@ -1,0 +1,27 @@
+// Mixins
+
+@mixin margin-center {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin flex-layout-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin flatten {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+// Media Query Mixin
+@mixin mq($w){
+    @media (min-width: $w){
+        @content;
+    }
+}

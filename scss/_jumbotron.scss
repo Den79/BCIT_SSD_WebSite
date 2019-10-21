@@ -1,0 +1,32 @@
+.jumbotron {
+    color: white;
+    background-image: url("../images/banner_580.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 4rem;
+}
+@media (min-width: 576px) {
+// @include mq($phoneLandscape) {
+    .jumbotron {
+        background-image: url(../images/banner_770.jpg);
+    }
+}
+@media (min-width: 768px) {
+// @include mq($tabletPortrait) {
+    .jumbotron {
+        background-image: url(../images/banner_1000.jpg);
+    }
+}
+@media (min-width: 992px) {
+// @include mq($desktopMedium) {
+    .jumbotron {
+        background-image: url(../images/banner_1200.jpg);
+    }
+}
+@media (min-width: 1200px) {
+// @include mq($desctopLarge) {
+    .jumbotron {
+        background-image: url(../images/banner_1800.jpg);
+    }
+}

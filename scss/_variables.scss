@@ -1,0 +1,26 @@
+// Colors
+$brand-color: white;
+$body-bg-color: #e9ecef;
+$wrapper-bg-color: white;
+// Text Colors
+$text-color-dark: black;
+$text-color-light: white;
+
+// Use Color functions to brighten and darken colors
+$brand-color-dark: darken($brand-color, 20);
+$brand-color-light: lighten($brand-color, 20);
+
+// Fonts
+$body-font: Georgia, Times, Times New Roman, serif;
+$heading-font: Tahoma, Verdana, Segoe, sans-serif;
+// Typographic Defualts
+$line-height: 1.4;
+
+// Layout variables
+$padding: 30px;
+
+// Media Query Breakpoints
+$desctopLarge: em(1200);
+$desktopMedium: em(992);
+$tabletPortrait: em(768);
+$phoneLandscape: em(576);
