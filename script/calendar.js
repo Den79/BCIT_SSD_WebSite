@@ -26,7 +26,6 @@ function processData(allText) {
     }
 
     // Insert the data from array (array calendarArrData) to code of the html page 
-
     var monthArrFullName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     var monthArrShortName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var monthIndex = 8; // first month of the calendar - Sep
@@ -79,7 +78,9 @@ function processData(allText) {
             // days
             htmlWeek = htmlWeek
                 + emptyDays(previousDayIndex, dayArr.length) // add empty day-divs to fill  month-div in the beginning of month (first week)
-                + '<div class="day"><div class="dayOfWeek">'
+                + '<div '
+                + currentDay(calendarArrData[i][0])  // add id='currentDay' if the date is today 
+                + ' class="day"><div class="dayOfWeek">'
                 + dayArr[dayIndex]
                 + '</div><div class="date">'
                 + calendarArrData[i][0]
@@ -104,7 +105,21 @@ function processData(allText) {
                         + '</div></div>';
 
     document.getElementById('calendarBody').innerHTML = finalHtmlCode;
-}
+
+    // function get String format <Month Day> and return string<'id="current"'> if it is today.
+    function currentDay(monthDayString ){
+        var result ="";
+        var todayDay = new Date().getDate();
+        var todayMonth = new Date().getMonth();
+        //var todayDay = 8; // Check with user day
+        //var todayMonth = 4; // Check with user month
+        var currentDateString = monthArrShortName[todayMonth]  + " " + todayDay;
+        if (currentDateString === monthDayString) {
+            result = result + 'id="currentDay"';
+        }
+        return result;
+    }
+}  //END of function processData
 
 // function get: numb: number of days (how many empty days we need) and howManyDaysInWeek: how many days in our calendar's week.  
 // return: empty .day-divs to fill the calendar
@@ -116,4 +131,3 @@ function emptyDays(numb, howManyDaysInWeek) {
     }
     return empty;
 };
-
