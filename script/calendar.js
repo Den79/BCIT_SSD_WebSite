@@ -86,9 +86,11 @@ function processData(allText) {
                 + calendarArrData[i][0]
                 + '</div><div class="course">'
                 + calendarArrData[i][1]
-                + '</div><div class="instructor">'
+                + '</div><div class="instructor"> <a href="staff.html#' // with link to the staff page instructor part
                 + calendarArrData[i][2]
-                + '</div></div>';
+                + '">'
+                + calendarArrData[i][2]
+                + '</a></div></div>';
             dayIndex++;
             previousDayIndex = 0; // how many empty days should we add
         }
