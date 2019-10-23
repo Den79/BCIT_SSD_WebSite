@@ -80,9 +80,9 @@ function processData(allText) {
                 + emptyDays(previousDayIndex, dayArr.length) // add empty day-divs to fill  month-div in the beginning of month (first week)
                 + '<div '
                 + currentDay(calendarArrData[i][0])  // add id='currentDay' if the date is today 
-                + ' class="day"><div class="dayOfWeek">'
+                + ' class="day"><div class="dayOfWeek text-primary">'
                 + dayArr[dayIndex]
-                + '</div><div class="date">'
+                + '</div><div class="date bg-primary">'
                 + calendarArrData[i][0]
                 + '</div><div class="course">'
                 + calendarArrData[i][1]
@@ -97,7 +97,7 @@ function processData(allText) {
     }
     // add the last "week" and "month" - div
     finalHtmlCode = finalHtmlCode
-                        + '<div class="month">'
+                        + '<div class="month bg-gradient-primary">'
                         + '<p>' 
                         + monthArrFullName[monthIndex] // use full name of month instead of short version
                         + '</p>'

@@ -1,6 +1,6 @@
 Week 1,,
-Sep 9,Orientation,Phil / Marlene
-Sep 10,Orientation - Day 2,Phil / Marlene
+Sep 9,Orientation,Marlene
+Sep 10,Orientation - Day 2,Marlene
 Sep 11,HTML5/CSS3,Michael
 Sep 12,System Analysis & Design,Phil
 Sep 13,HTML5/CSS3,Michael
