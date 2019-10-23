@@ -4,19 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/bootstrap.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script/calendar.js"></script>
-    
+    <script src="script/jquery.js"></script>
+    <script src="script/bootstrap.js"></script>
     <title>Schedule</title>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>Calendar 2019-2020</h1>
-        <button id = "listView">List view</button>
-        <div id="calendarBody" class="calendar">
+    <header class="pg-bootstrap-nav navbar navbar-expand-md navbar-dark fixed-top bg-primary">            
+        <div class="container">
+            <h1 class="navbar-brand"><a href="/index.html">SSD</a></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/students.html">Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/staff.html">Staff</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#0">Resources</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="#0">Courses</a></li>                        
+                    <li class="nav-item"><a class="nav-link" href="#0">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+    <main>
+        <div class="jumbotron text-center">
+            <div class="container">
+                <h1 class="display-3">Software Systems Developer</h1>
+                <p>Web Programmer Option</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper">
+                    <h1>Calendar 2019-2020</h1>
+                    <button id = "listView" class="btn btn-primary btn-lg">List view</button>
+                    <div id="calendarBody" class="calendar">
+                    </div>
+            </div> 
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            &copy; Copyright 2019
+        </div>
+    </footer>
     <script src="script/calendar-listviewButton.js"></script>
 </body>
 </html>
