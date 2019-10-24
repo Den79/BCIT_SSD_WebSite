@@ -1,0 +1,21 @@
+Alison,Accardo,aaccardo802@my.bcit.ca
+Lai,Aigner,laigner578@my.bcit.ca
+Monet ,Barrette,mbarrette802@my.bcit.ca
+Marissa,Barrow,mbarrow208@my.bcit.ca
+Michael,Burriss,mburriss817@my.bcit.ca
+Clare,Chou,cchou502@my.bcit.ca
+Jacalyn,Christian,jchristian175@my.bcit.ca
+Taren,Crowther,tcrowther216@my.bcit.ca
+Walter,Heisenberg,wheisenberg@my.bcit.ca
+Shira,Hyche,shyche702@my.bcit.ca
+Flossie,Iser,fiser123@my.bcit.ca
+Karpinder,Kaur,kkaur372@my.bcit.ca
+Kayla,Kim,akim802@my.bcit.ca
+Margot,Lawyer,mlawyer203@my.bcit.ca
+Jessica,Lee,jlee785@my.bcit.ca
+Phyliss,Mcswain,pmcwain@my.bcit.ca
+Alonso,Olberding,aolberding182@my.bcit.ca
+Trisha,Park,tpark302@my.bcit.ca
+Melissa,Reira,mreira785@my.bcit.ca
+Mathew ,Sibley,msibley712@my.bcit.ca
+Lourdes,Spataro,lspataro161@my.bcit.ca

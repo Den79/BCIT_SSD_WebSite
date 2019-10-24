@@ -66,6 +66,15 @@
 				padding: 3px;
 				font-size: 0.9em;
 				color:rgb(20, 40, 95);
+				a {
+					text-decoration: none;
+				}
+
+				a:hover{
+					background-color: rgba(2, 2, 187, 0.068);
+					padding: 3px 0 3px;
+					border-radius: 4px;
+				}
 			}
 			
 			.instructor {
@@ -78,7 +87,7 @@
 
 				a:hover{
 					background-color: rgba(2, 2, 187, 0.164);
-					padding: 4px 10px 4px;
+					padding: 3px 10px 3px;
 					border-radius: 4px;
 				}
 				

@@ -84,7 +84,9 @@ function processData(allText) {
                 + dayArr[dayIndex]
                 + '</div><div class="date bg-primary">'
                 + calendarArrData[i][0]
-                + '</div><div class="course">'
+                + '</div><div class="course"><a href="courses.html#' // with link to the courses page
+                + calendarArrData[i][1]
+                + '">'
                 + calendarArrData[i][1]
                 + '</div><div class="instructor"> <a href="staff.html#' // with link to the staff page instructor part
                 + calendarArrData[i][2]

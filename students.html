@@ -1,22 +1,55 @@
-<div class="staffSectionFooter">
-        <div class="email">
-            <p>E-mail: <a href="mailto:eAdams@bcit.ca">eAdams@bcit.ca</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="script/jquery.js"></script>
+    <script src="script/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script/students.js"></script>
+    <title>Staff</title>
+</head>
+<body>
+    <header class="pg-bootstrap-nav navbar navbar-expand-md navbar-dark fixed-top bg-primary">            
+        <div class="container">
+            <h1 class="navbar-brand"><a href="/index.html">SSD</a></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/schedule.html">Schedule</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/students.html">Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/staff.html">Staff</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#0">Resources</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="#0">Courses</a></li>                        
+                    <li class="nav-item"><a class="nav-link" href="#0">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="social-buttons">
-            <a href="http://www.facebook.com" class="fa fa-facebook"></a>
-            <a href="http://www.twitter.com" class="fa fa-twitter"></a>
-            <a href="http://www.linkedin.com" class="fa fa-linkedin"></a>
-            <a href="http://www.github.com" class="fa fa-github"></a>
-            <a href="http://www.instagram.com" class="fa fa-instagram"></a>
-            <a href="http://www.slack.com" class="fa fa-slack"></a>
-            <a href="http://www.skype.com" class="fa fa-skype"></a>
-            <a href="http://www.whatsapp.com" class="fa fa-whatsapp"></a>
+    </header>
+    <main>
+        <div class="jumbotron text-center">
+            <div class="container">
+                <h1 class="display-3">Software Systems Developer</h1>
+                <p>Web Programmer Option</p>
+            </div>
         </div>
-        <div class="courses">
-            <p>Courses:
-                <a href="courses.html#HTML5/CSS3">HTML5/CSS3</a> ,
-                <a href="courses.html#System">System</a> ,
-                <a href="courses.html#System">System</a>
-            </p>
+        <article>
+        <div class="container" >
+            <h1>SSD Student List</h1>
+            <div id="studentListTable"></div>
+        </div>    
+        </article>            
+    </main>
+    <footer>
+        <div class="container">
+            &copy; Copyright 2019
         </div>
-</div> <!--class="staffSectionFooter" -->
+    </footer>
+</body>
+</html>
