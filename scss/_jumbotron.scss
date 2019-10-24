@@ -1,32 +1,57 @@
 .jumbotron {
     color: white;
-    background-image: url("../images/banner_580.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("../images/banner_580.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 4rem;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 2px black;
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    p {
+        font-size: 2vw;
+    }
 }
 @media (min-width: 576px) {
 // @include mq($phoneLandscape) {
     .jumbotron {
-        background-image: url(../images/banner_770.jpg);
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ), url(../images/banner_770.jpg);
     }
 }
 @media (min-width: 768px) {
 // @include mq($tabletPortrait) {
     .jumbotron {
-        background-image: url(../images/banner_1000.jpg);
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ), url(../images/banner_1000.jpg);
     }
 }
 @media (min-width: 992px) {
 // @include mq($desktopMedium) {
     .jumbotron {
-        background-image: url(../images/banner_1200.jpg);
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ), url(../images/banner_1200.jpg);
     }
 }
 @media (min-width: 1200px) {
 // @include mq($desctopLarge) {
     .jumbotron {
-        background-image: url(../images/banner_1800.jpg);
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ), url(../images/banner_1800.jpg);
     }
 }
