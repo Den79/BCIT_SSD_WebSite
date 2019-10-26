@@ -1,0 +1,86 @@
+.app {
+    li {
+        margin: 20px 0;
+    }
+    a {
+        display: inline-block;
+        min-height: 100px;
+        min-width: 100px;
+        padding-top: 80px;
+        position: relative;
+        overflow: hidden;
+        width: auto;
+        z-index: 0;
+    }
+    a:after {
+        height: 128px;
+        left: calc(-50%);
+        position: absolute;
+        top: -32px;
+        transform: scale(0.5);
+        width: 200%;
+        z-index: -2;
+    }
+    a:before {
+        background-color: white;
+        bottom: 0px;
+        content: '';
+        height: calc(100% - 64px);
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+    a:focus:after,
+    a:hover:after {
+        top: -96px;
+    }
+
+    .mobile>a:after {
+        content: url(../images/i-app-mobile.png);
+    }
+
+    .windows>a:after {
+        content: url(../images/i-app-windows.png);
+    }
+
+    .desktop>a:after {
+        content: url(../images/i-app-desktop.png);
+    }
+
+    .cloud>a:after {
+        content: url(../images/i-app-cloud.png);
+    }
+
+    .web>a:after {
+        content: url(../images/i-app-web.png);
+    }
+
+    .games>a:after {
+        content: url(../images/i-app-games.png);
+    }
+    
+    .holographic>a:after {
+        content: url(../images/i-app-holographic.png);
+    }
+
+    .bots>a:after {
+        content: url(../images/i-app-bots.png);
+    }
+
+    .sharepoint>a:after {
+        content: url(../images/i-app-sharepoint.png);
+    }
+
+    .skype>a:after {
+        content: url(../images/i-app-skype.png);
+    }
+
+    .graph>a:after {
+        content: url(../images/i-app-graph.png);
+    }
+
+    .net>a:after {
+        content: url(../images/i-app-net.png);
+    }
+}
