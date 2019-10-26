@@ -1,11 +1,11 @@
 // Main Styles
 main {
     margin-top: 65px;
-    font-size: 2vw;
+    font-size: $font-size;
     h2 {
-        font-size: 2.5vw;
+        font-size: $heading-font-size;
     }
     a {
-        font-size: 2vw;
+        font-size: $font-size;
     }
 }

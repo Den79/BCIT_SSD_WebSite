@@ -1,5 +1,9 @@
 // Footer Styles
-
+footer {
+    color: $brand-color;
+    padding: 10px 0;
+    text-align: center;
+}
 .staffSectionFooter {
     display: flex;
     justify-content: space-between;

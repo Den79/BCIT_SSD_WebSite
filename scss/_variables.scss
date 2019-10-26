@@ -1,6 +1,7 @@
 // Colors
 $brand-color: white;
-$body-bg-color: #e9ecef;
+$body-bg-color-dark: #e9ecef;
+$body-bg-color-light: white;
 $wrapper-bg-color: white;
 // Text Colors
 $text-color-dark: black;
@@ -11,6 +12,8 @@ $brand-color-dark: darken($brand-color, 20);
 $brand-color-light: lighten($brand-color, 20);
 
 // Fonts
+$font-size: 1.5vw;
+$heading-font-size: 2.5vw;
 $body-font: Georgia, Times, Times New Roman, serif;
 $heading-font: Tahoma, Verdana, Segoe, sans-serif;
 // Typographic Defualts
@@ -18,6 +21,22 @@ $line-height: 1.4;
 
 // Layout variables
 $padding: 30px;
+// Grid Values
+$gutter: 2;
+
+// Function to determine column width
+// takes two numerical parameters:
+// $c -> the number of columns in a row
+// $g -> the gutter amount
+@function colWidth($c, $g: 2){
+    @return ((100 - $g * ($c - 1)) / $c) * 1%;
+}
+$one-col: 100%;
+$two-col: colWidth(2);
+$three-col: colWidth(3);
+$four-col: colWidth(4);
+$five-col: colWidth(5);
+$six-col: colWidth(6);
 
 // Media Query Breakpoints
 $desctopLarge: em(1200);

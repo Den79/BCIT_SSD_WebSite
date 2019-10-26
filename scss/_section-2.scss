@@ -1,0 +1,10 @@
+.section-2{
+    img:nth-child(2)  {
+        order: -1;
+    }
+    @media (min-width: 766px) {
+        img:nth-child(2)  {
+            order: 0;
+        }
+    }
+}

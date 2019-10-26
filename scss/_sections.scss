@@ -1,0 +1,26 @@
+section {
+    padding: 20px 0;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+    
+    .card {
+        background-color: $body-bg-color-light;
+        border: none;
+    }
+}
+
+section {
+    .card {
+        img {
+            object-fit: cover;
+        }
+    }
+    @media (min-width: 766px) {
+        padding: 60px 0;
+        h2 {
+            margin-bottom: 30px;
+        }
+    }
+}
