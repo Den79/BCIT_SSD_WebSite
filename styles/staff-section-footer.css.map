@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAoB;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,SAAS,EAAE,IAAI;EAEf,0BAAO;IACH,SAAS,EAAE,KAAK;IAChB,4BAAE;MACE,MAAM,EAAE,CAAC;EAGjB,4BAAS;IACL,KAAK,EAAE,IAAI;;AAInB,YAAY;EACR,aAAa,EAAE,kBAA6B;EAC5C,aAAa,EAAE,IAAI",
+"sources": ["../scss/staff-section-footer.scss"],
+"names": [],
+"file": "staff-section-footer.css"
+}

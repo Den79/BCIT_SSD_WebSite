@@ -1,0 +1,16 @@
+.staffSectionFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .staffSectionFooter .email {
+    font-size: 1.2em; }
+    .staffSectionFooter .email p {
+      margin: 0; }
+  .staffSectionFooter .courses {
+    width: 100%; }
+
+.row section {
+  border-bottom: 1px dotted #b4b4b4;
+  margin-bottom: 20px; }
+
+/*# sourceMappingURL=staff-section-footer.css.map */

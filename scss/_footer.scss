@@ -4,25 +4,3 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
-.staffSectionFooter {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    .email {
-        font-size: 1.2em;
-        //padding-bottom: 10px;
-        p {
-            margin: 0;
-        }
-    }
-    .courses {
-        width: 100%;
-        //padding-top: 10px;
-    }
-}
-
-.row section{
-    border-bottom: 1px dotted rgb(180, 180, 180);
-    margin-bottom: 20px;
-}

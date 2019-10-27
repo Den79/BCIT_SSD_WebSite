@@ -1,0 +1,20 @@
+.staffSectionFooter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .email {
+        font-size: 1.2em;
+        p {
+            margin: 0;
+        }
+    }
+    .courses {
+        width: 100%;
+    }
+}
+
+.row section{
+    border-bottom: 1px dotted rgb(180, 180, 180);
+    margin-bottom: 20px;
+}
