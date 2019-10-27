@@ -19,8 +19,11 @@ section {
     }
     @media (min-width: 766px) {
         padding: 60px 0;
+        .staff {
+            color: red;
+        } 
         h2 {
             margin-bottom: 30px;
-        }
+        }  
     }
 }
