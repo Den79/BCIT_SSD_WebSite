@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,70 +11,105 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Contact</title>
 </head>
+
 <body>
-    <header class="pg-bootstrap-nav navbar navbar-expand-md navbar-dark fixed-top bg-primary">            
+    <header class="pg-bootstrap-nav navbar navbar-expand-md navbar-dark fixed-top bg-primary">
         <div class="container">
             <h1 class="navbar-brand"><a href="/index.html">SSD</a></h1>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <nav class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home<span
+                                class="sr-only">(current)</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="/schedule.html">Schedule</a></li>
                     <li class="nav-item"><a class="nav-link" href="/students.html">Students</a></li>
                     <li class="nav-item"><a class="nav-link" href="/staff.html">Staff</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/resources.html">Resources</a></li>                    
-                    <li class="nav-item"><a class="nav-link" href="/courses.html">Courses</a></li>                        
-                    <li class="nav-item active"><a class="nav-link" href="/contact.html">Contact<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/courses.html">Courses</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/contact.html">Contact<span
+                                class="sr-only">(current)</span></a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>British Columbia Institute of Technology</h2>
-                    <p>The BCIT Downtown Campus is in the heart of Vancouver, near the Granville Skytrain Station.</p>
-                    <p>555 Seymour Street<br>
+        <section class="section-1">
+            <div class="container">
+                <h2>British Columbia Institute of Technology</h2>
+                <p>The BCIT Downtown Campus is in the heart of Vancouver, near the Granville Skytrain Station.</p>
+                <p>555 Seymour Street<br>
                     Vancouver, British Columbia<br>
                     V6B 3H6 , Canada</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41642.099283027215!2d-123.11533700000001!3d49.283385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867178c92a69b9%3A0x6b40938af55472d6!2s555%20Seymour%20St%2C%20Vancouver%2C%20BC%20V6B%203H6%2C%20Canada!5e0!3m2!1sen!2sus!4v1572236980796!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <div class="row">
+                <iframe class="col-md-6"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41642.099283027215!2d-123.11533700000001!3d49.283385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867178c92a69b9%3A0x6b40938af55472d6!2s555%20Seymour%20St%2C%20Vancouver%2C%20BC%20V6B%203H6%2C%20Canada!5e0!3m2!1sen!2sus!4v1572236980796!5m2!1sen!2sus"
+                    frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
-                <div class="col-md-6">
-                    <form action="#">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="first name">
+            </div>
+        </section>
+        <section class="container">
+            <h2>After you apply & contacting your Admissions Officer</h2>
+            <p>Already submitted an application and want to know if we’ve received your application?</p>
+            <p>Check your <a href="https://my.bcit.ca/">myBCIT</a> for your application letter via myCommunication.</p>
+            <p>You will be assigned an Admissions Officer once your application has been processed. Feel free to contact
+                your Admissions Officer regarding the status of your application at any time. You can find their contact
+                information in your myBCIT account via your letters in myCommunication.</p>
+        </section>
+        <section class="section-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <form action="/" class="basic-form col-md-12" method="post">
+                        <h2>Contuct us</h2>
+                        <fieldset>
+                            <legend>Personal info</legend>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="first-name" class="col-form-label">First name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-control" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="lastName" class="col-form-label">Last name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-control" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="phone" class="col-form-label">Phone (format: xxx-xxx-xxxx)</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required pattern="^\d{3}-\d{3}-\d{4}$">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email" class="col-form-label">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="details" class="col-form-label">Details</label>
+                                    <textarea type="text" id="details" name="details" class="form-control"></textarea>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="lastName">Last name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="last name">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="chkSubscribe">
-                                    <label for="chkSubscribe" class="form-check-label">
-                                        Subscribe me
+                        </fieldset>
+                        <fieldset>
+                            <div class="row m-2">
+                                <div class="form-group form-check col-md-6">
+                                    <label for="prospective" class="form-check-label">
+                                        <input type="radio" id="prospective" name="studentType" class="form-check-input"
+                                            checked>
+                                        Prospective student
+                                    </label>
+                                </div>
+                                <div class="form-group form-check col-md-6">
+                                    <label for="current" class="form-check-label">
+                                        <input type="radio" id="current" name="studentType" class="form-check-input">
+                                        Current student
                                     </label>
                                 </div>
                             </div>
+                        </fieldset>
+                        <div class="row submit-group">
+                            <div class="form-group col-md-4 submit">
+                                <input type="submit" value="Submit" class="btn btn-primary w-100">
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
@@ -85,4 +121,5 @@
         </div>
     </footer>
 </body>
+
 </html>
