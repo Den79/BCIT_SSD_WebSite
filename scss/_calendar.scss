@@ -33,7 +33,7 @@
 			margin: 0;
 			border: 1px dotted white;
 			color: white;
-			font-size: 3rem; // only month name
+			font-size: 2rem; // only month name
 		}
 	}
 
@@ -144,10 +144,19 @@
 	#listView {
 		display: none;
 	}
+
+	main h2 {
+		font-size: 7vw;
+	}
 	.calendar {
 
+		.month p {
+			font-size: 7vw;
+		}
+
 		.week {
-			font-size: 1.5rem;
+			//font-size: 1.5rem;
+			font-size: 5vw;
 			display: block;
 		}
 		.day .course {
@@ -163,7 +172,8 @@
 		.calendar {
 	
 			.week {
-				font-size: 1.5rem;
+				//font-size: 1.5rem;
+				font-size: 5vw;
 				display: block;
 			}
 	
@@ -177,7 +187,8 @@
 				
 				.course {
 					text-align: center;
-					font-size: 1.3rem;
+					//font-size: 1.3rem;
+					font-size: 5vw;
 					padding-left: 0;
 				}
 				

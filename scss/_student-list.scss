@@ -1,3 +1,16 @@
 #studentListTable {
     padding: 20px 0;
 }
+
+@media (max-width: 576px) {
+    #studentListTable {
+        font-size: 3vw;
+        td, th {
+            padding: 2vw;
+        }
+    }
+    article {
+        min-height: 85vh;
+    }
+    
+}   
