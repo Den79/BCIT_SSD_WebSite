@@ -21,7 +21,6 @@
     }
 }
 @media (min-width: 576px) {
-// @include mq($phoneLandscape) {
     .jumbotron {
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.5),
@@ -30,7 +29,6 @@
     }
 }
 @media (min-width: 768px) {
-// @include mq($tabletPortrait) {
     .jumbotron {
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.5),
@@ -39,7 +37,6 @@
     }
 }
 @media (min-width: 992px) {
-// @include mq($desktopMedium) {
     .jumbotron {
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.5),
@@ -48,7 +45,6 @@
     }
 }
 @media (min-width: 1200px) {
-// @include mq($desctopLarge) {
     .jumbotron {
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.5),
