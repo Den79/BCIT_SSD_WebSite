@@ -1,0 +1,325 @@
+/* CSS Document */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  margin: 0; }
+
+body {
+  background-color: white; }
+
+.wrapper {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white; }
+
+header h1 a {
+  color: white; }
+header h1 a:hover {
+  text-decoration: none; }
+
+@media (min-width: 768px) {
+  .pg-bootstrap-nav .navbar-collapse {
+    flex: 0; } }
+.jumbotron {
+  color: white;
+  border-radius: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner_580.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 4rem;
+  text-transform: uppercase;
+  text-shadow: 2px 1px 2px black;
+  margin-bottom: 0; }
+  .jumbotron h2 {
+    font-size: 7vw; }
+  .jumbotron p {
+    font-size: 2vw; }
+
+@media (min-width: 576px) {
+  .jumbotron {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/banner_770.jpg); } }
+@media (min-width: 768px) {
+  .jumbotron {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/banner_1000.jpg); } }
+@media (min-width: 992px) {
+  .jumbotron {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/banner_1200.jpg); } }
+@media (min-width: 1200px) {
+  .jumbotron {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/banner_1800.jpg); } }
+main {
+  margin-top: 65px;
+  font-size: 1em; }
+  main h1 {
+    padding-top: 15px; }
+  main h2 {
+    font-size: 1.7em; }
+  main a {
+    font-size: 1em; }
+  main ul {
+    list-style: none; }
+
+footer {
+  color: white;
+  padding: 10px 0;
+  text-align: center; }
+
+/* calendar START*/
+.calendar-box {
+  padding: 20px 0; }
+
+.wrapper {
+  background-color: #5a5a81;
+  color: white;
+  border-radius: 8px; }
+  .wrapper .sceduleHeader {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    justify-content: space-between; }
+
+.calendar {
+  background-color: white;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto; }
+  .calendar .month {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem; }
+    .calendar .month p {
+      margin: 0;
+      border: 1px dotted white;
+      color: white;
+      font-size: 2rem; }
+  .calendar .week {
+    display: flex;
+    width: 100%;
+    justify-content: center; }
+    .calendar .week #currentDay {
+      background-color: rgba(239, 255, 8, 0.973);
+      border: 2px solid #ff1111; }
+    .calendar .week #empty {
+      background-color: rgba(238, 236, 236, 0.521); }
+    .calendar .week .day {
+      background-color: white;
+      flex: 1;
+      margin: 3px;
+      border: 1px dotted #2d2d85;
+      text-align: center; }
+      .calendar .week .day .date {
+        color: white;
+        background-color: #494979;
+        border: 1px dotted white;
+        padding: 3px;
+        font-weight: bold; }
+      .calendar .week .day .course {
+        padding: 3px;
+        font-size: 0.9em;
+        color: #14285f; }
+        .calendar .week .day .course a {
+          text-decoration: none; }
+        .calendar .week .day .course a:hover {
+          background-color: rgba(2, 2, 187, 0.068);
+          padding: 3px 0 3px;
+          border-radius: 4px; }
+      .calendar .week .day .instructor {
+        padding: 3px;
+        color: #1b6591; }
+        .calendar .week .day .instructor a {
+          text-decoration: none; }
+        .calendar .week .day .instructor a:hover {
+          background-color: rgba(2, 2, 187, 0.164);
+          padding: 3px 10px 3px;
+          border-radius: 4px; }
+
+.changeCalendarView .calendar .week {
+  display: block; }
+.changeCalendarView .calendar .day {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 2px 0; }
+  .changeCalendarView .calendar .day .dayOfWeek {
+    flex: 2;
+    text-align: left;
+    padding-left: 10px; }
+  .changeCalendarView .calendar .day .date {
+    flex: 1; }
+  .changeCalendarView .calendar .day .course {
+    flex: 3;
+    text-align: left;
+    padding-left: 10px; }
+  .changeCalendarView .calendar .day .instructor {
+    flex: 2; }
+.changeCalendarView .calendar #empty {
+  display: none; }
+
+@media (max-width: 576px) {
+  #listView {
+    display: none; }
+
+  main h2 {
+    font-size: 7vw; }
+
+  .calendar .month p {
+    font-size: 7vw; }
+  .calendar .week {
+    font-size: 5vw;
+    display: block; }
+  .calendar .day .course {
+    font-size: 1.3rem; }
+  .calendar #empty {
+    display: none; }
+
+  .changeCalendarView .calendar .week {
+    font-size: 5vw;
+    display: block; }
+  .changeCalendarView .calendar .day {
+    display: block; }
+    .changeCalendarView .calendar .day .dayOfWeek {
+      text-align: center;
+      padding-left: 0; }
+    .changeCalendarView .calendar .day .course {
+      text-align: center;
+      font-size: 5vw;
+      padding-left: 0; } }
+/* calendar END*/
+section {
+  padding: 20px 0; }
+  section h2 {
+    margin-bottom: 10px; }
+  section .card {
+    background-color: white;
+    border: none; }
+
+section .card img {
+  object-fit: cover; }
+@media (min-width: 766px) {
+  section {
+    padding: 60px 0; }
+    section h2 {
+      margin-bottom: 30px; } }
+
+.section-1 {
+  background-color: #e9ecef; }
+
+.section-2 img:nth-child(2) {
+  order: -1; }
+@media (min-width: 768px) {
+  .section-2 img:nth-child(2) {
+    order: 0; } }
+
+.section-3 {
+  background-color: #e9ecef; }
+  .section-3 .card {
+    -moz-box-shadow: 0px 0px 3px 3px rgba(204, 204, 204, 0.5);
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(204, 204, 204, 0.5);
+    box-shadow: 0px 0px 3px 3px rgba(204, 204, 204, 0.5);
+    height: 100%; }
+
+.app li {
+  margin: 20px 0; }
+.app a {
+  display: inline-block;
+  min-height: 100px;
+  min-width: 100px;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  z-index: 0; }
+.app a:after {
+  height: 128px;
+  left: calc(-50%);
+  position: absolute;
+  top: -32px;
+  transform: scale(0.5);
+  width: 200%;
+  z-index: -2; }
+.app a:before {
+  background-color: white;
+  bottom: 0px;
+  content: '';
+  height: calc(100% - 64px);
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1; }
+.app a:focus:after,
+.app a:hover:after {
+  top: -96px; }
+.app .mobile > a:after {
+  content: url(../images/i-app-mobile.png); }
+.app .windows > a:after {
+  content: url(../images/i-app-windows.png); }
+.app .desktop > a:after {
+  content: url(../images/i-app-desktop.png); }
+.app .cloud > a:after {
+  content: url(../images/i-app-cloud.png); }
+.app .web > a:after {
+  content: url(../images/i-app-web.png); }
+.app .games > a:after {
+  content: url(../images/i-app-games.png); }
+.app .holographic > a:after {
+  content: url(../images/i-app-holographic.png); }
+.app .bots > a:after {
+  content: url(../images/i-app-bots.png); }
+.app .sharepoint > a:after {
+  content: url(../images/i-app-sharepoint.png); }
+.app .skype > a:after {
+  content: url(../images/i-app-skype.png); }
+.app .graph > a:after {
+  content: url(../images/i-app-graph.png); }
+.app .net > a:after {
+  content: url(../images/i-app-net.png); }
+
+#studentListTable {
+  padding: 20px 0; }
+
+@media (max-width: 576px) {
+  #studentListTable {
+    font-size: 3vw; }
+    #studentListTable td, #studentListTable th {
+      padding: 2vw; }
+
+  article {
+    min-height: 95vh; } }
+#accordion {
+  padding-bottom: 20px; }
+
+.social-buttons-staff {
+  font-size: 2rem; }
+  .social-buttons-staff a {
+    text-decoration: none; }
+
+td .social-buttons-students {
+  font-size: 1.6rem;
+  letter-spacing: 10px; }
+  td .social-buttons-students a {
+    text-decoration: none; }
+
+td .social-links-students {
+  display: none; }
+
+@media (max-width: 768px) {
+  td.social-links-students, th.social-links-students {
+    display: none; } }
+
+/*# sourceMappingURL=styles.css.map */
